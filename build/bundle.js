@@ -967,7 +967,7 @@ var app = (function () {
     			attr(a0, "id", "brand");
     			attr(div0, "class", "collapse navbar-collapse");
     			attr(div0, "id", "links");
-    			attr(a2, "class", "nav-link");
+    			attr(a2, "class", "nav-link point");
     			attr(li1, "class", "nav-item active");
     			attr(li2, "class", "nav-link active");
     			attr(ul1, "class", "navbar-nav ml-auto");
