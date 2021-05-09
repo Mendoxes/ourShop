@@ -67,13 +67,9 @@ export default {
 		// browser on changes when not in production
 		!production && livereload('public'),
 
-	// If we're building for production (npm run build
+		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()&&
-		ghPages.publish("public", (err)=> {console.log("publish",err);
-	
-	})
-
+		production && terser()
 	],
 	watch: {
 		clearScreen: false
