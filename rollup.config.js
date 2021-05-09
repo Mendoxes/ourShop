@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
+import ghPages from "gh-pages"
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -66,9 +67,13 @@ export default {
 		// browser on changes when not in production
 		!production && livereload('public'),
 
-		// If we're building for production (npm run build
+	// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser()&&
+		ghPages.publish("public", (err)=> {console.log("publish",err);
+	
+	})
+
 	],
 	watch: {
 		clearScreen: false
