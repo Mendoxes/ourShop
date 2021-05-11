@@ -1,11 +1,11 @@
 <script>
     import Card from "./Card.svelte";
     import items from "../itemsSecond.js";
-    
+   
   </script>
   
   <div class="container">
-    {items}
+
     <div class="row">
     
 
@@ -15,6 +15,7 @@
 
       <Card {item} /> 
     </div>
+    
   
     {/each} 
    </div> </div>  

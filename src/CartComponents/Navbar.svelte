@@ -23,6 +23,13 @@
         option: "checkout"
       });
     }
+
+    function goCd2() {
+      dispatch("nav", {
+        option: "cd2"
+      });
+    }
+
   </script>
   
 
@@ -39,9 +46,12 @@
             <ul class="navbar-nav mr-auto">
               
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Electronics</a>
+                    <a class="nav-link point"  on:click={goCd2}> Cars</a>
                 </li>
          
+                <li class="nav-item">
+                  <a class="nav-link point" on:click={goToHome}> Electronics</a>
+              </li>
 
             </ul>
         </div>
